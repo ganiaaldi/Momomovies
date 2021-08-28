@@ -1,4 +1,4 @@
-package com.viewmodel
+package com.gadidev.momomovies.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel

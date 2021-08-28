@@ -1,4 +1,4 @@
-package com.viewmodel
+package com.gadidev.momomovies.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
