@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/drawerMenu1"
+            android:title="New Upload"/>
+        <item
+            android:id="@+id/drawerMenu2"
+            android:title="Coming soon" />
+        <item
+            android:id="@+id/drawerMenu3"
+            android:title="TV Series" />
+    </group>
+    <group>
+    <item android:title="Genre">
+        <menu>
+            <item
+                android:id="@+id/genre_action"
+                android:icon="@drawable/ic_action"
+                android:title="Action" />
+            <item
+                android:id="@+id/genre_adventure"
+                android:icon="@drawable/ic_adventure"
+                android:title="Adventure" />
+            <item
+                android:id="@+id/genre_comedy"
+                android:icon="@drawable/ic_comedy"
+                android:title="Comedy" />
+            <item
+                android:id="@+id/genre_drama"
+                android:icon="@drawable/ic_drama"
+                android:title="Drama" />
+            <item
+                android:id="@+id/genre_fantasy"
+                android:icon="@drawable/ic_fantasy"
+                android:title="Fantasy" />
+            <item
+                android:id="@+id/genre_romance"
+                android:icon="@drawable/ic_romance"
+                android:title="Romance" />
+            <item
+                android:id="@+id/genre_scifi"
+                android:icon="@drawable/ic_scifi"
+                android:title="Sci-Fi" />
+        </menu>
+    </item>
+    </group>
+    <group>
+        <menu>
+        <item
+            android:title="Favorite"
+            android:id="@+id/drawer_favorite"
+            android:icon="@drawable/ic_star"/>
+        </menu>
+    </group>
+</menu>

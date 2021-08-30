@@ -4,8 +4,9 @@
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/colorYellow</item>
+        <item name="colorControlHighlight">@color/colorYellow</item>
         <item name="android:forceDarkAllowed" tools:targetApi="q"> false </item>
     </style>
 
@@ -24,6 +25,28 @@
         <item name="android:fontFamily">@font/opensans_bold</item>
         <item name="android:textSize">24sp</item>
         <item name="android:textColor">@color/colorWhite</item>
+    </style>
+
+    <style name="DarkTextSmall" parent="TextAppearance.AppCompat">
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+
+    <style name="NavigationDrawerStyle" parent="Theme.AppCompat">
+        <item name="actionOverflowButtonStyle">@style/ActionButtonOverflowStyle</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+        <item name="android:fontFamily">@font/opensans_regular</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/colorYellow</item>
+        <item name="colorControlHighlight">@color/colorYellow</item>
+        <item name="android:textColorSecondary">@color/colorYellow</item>
+    </style>
+    <style name="ActionButtonOverflowStyle">
+        <item name="android:color">@color/colorYellow</item>
+    </style>
+    <style name="DrawerArrowStyle">
+        <item name="android:color">@color/colorYellow</item>
     </style>
 
     <style name="WhiteTextSmall" parent="TextAppearance.AppCompat">
