@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="clickListener"
+            type="android.view.View.OnClickListener"/>
+
+        <variable
+            name="movies"
+            type="com.gadidev.momomovies.model.ResultMovies"/>
+    </data>
+
+<androidx.cardview.widget.CardView
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view_comingsoon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    card_view:cardCornerRadius="5dp"
+    card_view:cardBackgroundColor="@color/colorPrimary"
+    android:foreground="@drawable/border_yellow"
+    card_view:cardUseCompatPadding="true"
+    android:onClick="@{clickListener}">
+
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="250dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageViewMovies"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:background="@drawable/nase"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/colorPrimary"
+            android:layout_alignParentBottom="true"
+            android:alpha="0.5">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNameMovies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            style="@style/YellowTextBold"
+            android:fontFamily="@font/heroes_assemble"
+            android:text="@{movies.title}"
+            />
+
+    </RelativeLayout>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</layout>

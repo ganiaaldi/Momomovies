@@ -7,6 +7,7 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET("comingsoon")
-    suspend fun getComingSoon() : Response<List<Movies>>
+    suspend fun getComingSoon() : Response<Movies>
+
 
 }

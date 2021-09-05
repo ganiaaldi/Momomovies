@@ -21,7 +21,9 @@ import com.gadidev.momomovies.databinding.ActivityMainBinding
 import com.gadidev.momomovies.utils.ChangeToolbarTitle
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity(), ChangeToolbarTitle {
     private lateinit var binding: ActivityMainBinding
     private lateinit var mainNavControl: NavController
