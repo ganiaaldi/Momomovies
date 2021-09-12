@@ -14,6 +14,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        android:indeterminate="true"
+        android:indeterminateTintMode="src_atop"
         android:indeterminateTint="@color/colorWhite"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
@@ -40,6 +42,6 @@
         android:layout_centerVertical="true"
         tools:listitem="@layout/item_comingsoon"
         app:layout_constraintTop_toBottomOf="@id/tvComingSoon"
-        />
+        tools:targetApi="lollipop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

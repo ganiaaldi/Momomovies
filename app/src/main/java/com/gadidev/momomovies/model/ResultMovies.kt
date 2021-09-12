@@ -6,28 +6,26 @@ import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "movies")
 data class ResultMovies (
-    @PrimaryKey(autoGenerate = true)
-    val id: Int,
-
+    @PrimaryKey
     @field:SerializedName("title")
     val title: String,
 
     @field:SerializedName("thumbnail")
-    val thumbnail: String,
+    val thumbnail: String?,
 
     @field:SerializedName("rating")
-    val rating: String,
+    val rating: String?,
 
     @field:SerializedName("duration")
-    val duration: String,
+    val duration: String?,
 
     @field:SerializedName("quality")
-    val quality: String,
+    val quality: String?,
 
     @field:SerializedName("trailer")
-    val trailer: String,
+    val trailer: String?,
 
     @field:SerializedName("genre")
-    val genre: List<String>
+    val genre: List<String?>
 )
 

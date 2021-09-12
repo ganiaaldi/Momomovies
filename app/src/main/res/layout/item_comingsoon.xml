@@ -34,7 +34,6 @@
             android:id="@+id/imageViewMovies"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:background="@drawable/nase"
             android:scaleType="centerCrop"/>
 
         <RelativeLayout
@@ -53,7 +52,6 @@
             android:textAlignment="center"
             style="@style/YellowTextBold"
             android:fontFamily="@font/heroes_assemble"
-            android:text="@{movies.title}"
             />
 
     </RelativeLayout>

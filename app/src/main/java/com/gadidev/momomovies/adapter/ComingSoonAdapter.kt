@@ -43,7 +43,7 @@ class MovieViewHolder(private val itemBinding: ItemComingsoonBinding, private va
         itemBinding.root.setOnClickListener(this)
     }
 
-    @SuppressLint("SetTextI18n")
+    @SuppressLint("Set  TextI18n")
     fun bind(item: ResultMovies) {
         this.movie = item
         itemBinding.tvNameMovies.text = item.title
@@ -53,6 +53,6 @@ class MovieViewHolder(private val itemBinding: ItemComingsoonBinding, private va
     }
 
     override fun onClick(v: View?) {
-        listener.onClickedMovie(movie.title)
+        listener.onClickedMovie(movie.title.toString())
     }
 }

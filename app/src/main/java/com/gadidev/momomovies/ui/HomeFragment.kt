@@ -1,10 +1,12 @@
 package com.gadidev.momomovies.ui
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
@@ -68,27 +70,35 @@ class HomeFragment : Fragment(), ComingSoonAdapter.MovieItemListener {
 //
 //    }
 
+    @SuppressLint("WrongConstant")
     private fun setupRecyclerView() {
         adapter = ComingSoonAdapter(this)
-        binding.rvComingSoon.layoutManager = LinearLayoutManager(requireContext())
+        binding.rvComingSoon.layoutManager = LinearLayoutManager(requireContext(),LinearLayout.HORIZONTAL,false)
         binding.rvComingSoon.adapter = adapter
     }
 
     private fun setupObservers() {
         Timber.tag("dapetGa").d("%s", viewModel.movies)
         viewModel.movies.observe(viewLifecycleOwner, Observer {
-            Timber.tag("status").d("%s", it.status)
+            if (it.data.isNullOrEmpty()) {
+                viewModel.loading.observe(viewLifecycleOwner, { isLoading ->
+                    binding.progressDialog.visibility = if (isLoading) View.VISIBLE else View.GONE
+                })
+            } else {
+            Timber.tag("status resource").d("%s", it.status)
             when (it.status) {
+                Resource.Status.LOADING ->
+                    binding.progressDialog.visibility = View.VISIBLE
+
                 Resource.Status.SUCCESS -> {
                     binding.progressDialog.visibility = View.GONE
                     if (!it.data.isNullOrEmpty()) adapter.setItems(ArrayList(it.data))
                     Timber.tag("CekData").d("%s", ArrayList(it.data))
                 }
+
                 Resource.Status.ERROR ->
                     Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
-
-                Resource.Status.LOADING ->
-                    binding.progressDialog.visibility = View.VISIBLE
+            }
             }
         })
     }

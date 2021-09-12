@@ -22,7 +22,7 @@ class MainViewModel @Inject constructor(private val repository: MoviesRepository
 //    val exceptionHandler = CoroutineExceptionHandler { _, throwable ->
 //        onError("Exception handled: ${throwable.localizedMessage}")
 //    }
-//    val loading = MutableLiveData<Boolean>()
+    val loading = MutableLiveData<Boolean>()
     val movies = repository.getComingSoon()
 
     fun getComingSoon() {
